@@ -206,6 +206,7 @@ const LandingPage = () => {
               </div>
             ))}
           </div>
+          
 
           {/* Features */}
           <div className="features-section fade-in-up">
