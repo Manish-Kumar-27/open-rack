@@ -241,7 +241,7 @@ const LandingPage = () => {
                 universe.
               </p>
               <button className="btn btn--outline btn--lg" disabled>
-                <span className="btn-text">Login</span>
+               <a href='/home'> <span className="btn-text">Login</span></a>
                 <span className="coming-soon">Coming Soon</span>
               </button>
             </div>
