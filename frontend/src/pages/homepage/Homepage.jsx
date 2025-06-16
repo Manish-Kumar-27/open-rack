@@ -45,7 +45,7 @@ const HomePage = () => {
 </div>
 
         </div>
-        <div className="brand">ReadSphere</div>
+        <div className="brand">OpenRack</div>
       </nav>
 
       {/* Sidebar */}
@@ -66,7 +66,7 @@ const HomePage = () => {
 
       {/* Main Content */}
       <main className="mainContent">
-        <h1>Welcome to ReadSphere</h1>
+        <h1>Welcome to OpenRack</h1>
         <p>
           This is your personalized e-book experience. Use the sidebar to
           explore.
