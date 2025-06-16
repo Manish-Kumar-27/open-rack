@@ -1,0 +1,225 @@
+/* Hero Section */
+.lp-hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f0f23 0%, #17174b 50%, #16213e 100%);
+  position: relative;
+}
+.lp-hero-content {
+  text-align: center;
+  z-index: 10;
+  max-width: 800px;
+  padding: 2rem;
+}
+.lp-hero-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #32b8c6 0%, #8a2be2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.lp-hero-subtitle {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #a7a9a9;
+}
+
+
+
+.lp-hero-description {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin-bottom: 2rem;
+  color: #a7a9a9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* About Section */
+.lp-about-section {
+  padding: 4rem 0;
+  background: linear-gradient(180deg, #0a0a0a 0%, #1c1c5b 100%);
+}
+.lp-about-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.lp-section-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #32b8c6 0%, #61259d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.lp-section-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #a7a9a9;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.lp-about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  padding: 3rem 1rem; /* Add vertical spacing */
+}
+.lp-about-card {
+  margin: 1rem 0; /* Add spacing before and after each card */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+.lp-about-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  color: #32b8c6;
+  animation: lp-float 3s ease-in-out infinite;
+}
+.lp-scroll-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #32b8c6, #8a2be2);
+  width: 0%;
+  z-index: 999;
+  transition: width 0.2s ease-out;
+}
+
+.lp-hero-parallax {
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+
+.lp-about-icon svg {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: dash 2s ease-in-out forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.lp-btn-outline:hover {
+  background: linear-gradient(135deg, #32b8c6, #8a2be2);
+  color: #fff;
+  opacity: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .lp-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .lp-btn-outline {
+    width: 100%;
+  }
+}
+
+
+@keyframes lp-float {
+  0%, 100% { transform: translateY(0px);}
+  50% { transform: translateY(-10px);}
+}
+.lp-about-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.lp-about-card p {
+  color: #a7a9a9;
+  line-height: 1.6;
+}
+
+/* Login Section */
+.lp-login-section {
+  padding: 4rem 0;
+  background: linear-gradient(180deg, #1a1a2e 0%, #0f0f23 100%);
+}
+.lp-login-card {
+  max-width: 500px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.lp-login-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.lp-login-subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #32b8c6 0%, #8a2be2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.lp-login-description {
+  color: #a7a9a9;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+.lp-btn-outline {
+  background: transparent;
+  border: 2px solid;
+  border-image: linear-gradient(135deg, #32b8c6, #8a2be2) 1;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.6;
+  cursor: not-allowed;
+  margin-top: 0.5rem;
+  margin-left: 10px;
+}
+
+/* Animations */
+.lp-fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: lp-fadeInUp 0.8s ease-out forwards;
+}
+@keyframes lp-fadeInUp {
+  from { opacity: 0; transform: translateY(30px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lp-hero-content, .lp-login-card, .lp-about-card {
+    padding: 1rem;
+  }
+  .lp-about-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

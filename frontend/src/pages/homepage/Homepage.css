@@ -1,0 +1,252 @@
+/* ========= Layout ========= */
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #0f0f23;
+  color: #f0f0f0;
+  overflow: hidden;
+}
+
+/* ========= Navbar ========= */
+.navbar {
+ display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1a1a2e;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  gap: 0.5rem;
+}
+
+.leftNav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  color: #32b8c6;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.brand {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.searchInput {
+ background-color: #0f0f23;
+  color: #fff;
+  border: 1px solid #32b8c6;
+  border-radius: 4px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.95rem;
+  flex: 1;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+  border-color: #8a2be2;
+}
+
+/* ========= Sidebar ========= */
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 75%;
+  max-width: 280px;
+  height: calc(100vh - 60px);
+  background-color: #1a1a2e;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  padding: 1rem 0;
+  z-index: 900;
+}
+
+.sidebarOpen {
+  transform: translateX(0%);
+}
+
+.sidebarList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebarList li {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.05rem;
+  color: #d0d0d0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sidebarList li:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+/* ========= Backdrop ========= */
+.backdrop {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 60px);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 800;
+}
+
+/* ========= Main Content ========= */
+.mainContent {
+  flex: 1;
+  margin-top: 60px;
+  padding: 1.5rem;
+  overflow-y: auto;
+  transition: margin-left 0.3s ease;
+}
+
+.mainContent h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #32b8c6;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mainContent p {
+  color: #ccc;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.searchWrapper {
+   display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 300px;
+  width: 100%;;
+}
+
+.searchContainer {
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* ✅ wider for desktop */
+  display: flex;
+  align-items: center;
+}
+
+.searchInputWithButton {
+  width: 100%;
+  padding: 0.5rem 5rem 0.5rem 2.2rem; /* left for icon, right for button */
+  background-color: #0f0f23;
+  color: #fff;
+  border: 1px solid #8a2be2;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.searchInputWithButton:focus {
+  border-color: #32b8c6;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.75rem;
+  color: #888;
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+
+.searchInlineButton {
+  position: absolute;
+  right: 0.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #32b8c6;
+  border: none;
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.searchInlineButton:hover {
+  background-color: #289fab;
+}
+
+/* Mobile override */
+@media (max-width: 768px) {
+  .searchContainer {
+    max-width: 100%;
+  }
+}
+
+/* ========= Responsive ========= */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .leftNav {
+    width: 100%;
+  }
+  .searchInput {
+    width: 100%;
+    margin-top: 0.5rem;
+    display: block;
+  }
+
+  .mainContent h1 {
+    font-size: 1.5rem;
+  }
+
+  .mainContent p {
+    font-size: 0.95rem;
+  }
+   .brand {
+    display: none;
+  }
+}
+.searchSpinner {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #32b8c6;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
