@@ -1,0 +1,79 @@
+.book-card.simple {
+  width: 200px;
+  background: #161822;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.book-card.simple:hover {
+  transform: translateY(-4px);
+}
+
+.book-cover {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.book-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.book-genre {
+  background-color: #8a2be2;
+  color: #fff;
+  font-size: 0.65rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.book-author {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 0.75rem;
+}
+
+.book-progress-bar {
+  background-color: #2e2e3e;
+  border-radius: 4px;
+  height: 6px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.book-progress {
+  height: 100%;
+  background-color: #32b8c6;
+  width: var(--progress-width, 0%);
+  transition: width 0.3s ease;
+}
+
+.resume-button {
+  background-color: #32b8c6;
+  border: none;
+  padding: 0.4rem 1rem;
+  color: #fff;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #289fab;
+}
