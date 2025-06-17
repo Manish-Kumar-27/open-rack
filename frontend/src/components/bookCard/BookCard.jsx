@@ -1,12 +1,12 @@
 import React from "react";
 import "./BookCard.css";
 
-const BookCard = ({ title, author, cover, genre, progress = 0, onResume }) => {
+const BookCard = ({ title, author, cover, genre, onResume }) => {
   return (
     <div
       className="book-card simple"
-      style={{ "--progress-width": `${progress}%` }}
-    >
+      >
+    
       <img
         className="book-cover"
         src={cover || "https://via.placeholder.com/80x120?text=Book"}
@@ -18,10 +18,6 @@ const BookCard = ({ title, author, cover, genre, progress = 0, onResume }) => {
       {genre && <span className="book-genre">{genre}</span>}
 
       <p className="book-author">by {author}</p>
-
-      <div className="book-progress-bar">
-        <div className="book-progress"></div>
-      </div>
 
       <button className="resume-button" onClick={onResume}>
         Resume
