@@ -17,7 +17,7 @@ const ContinueReading = ({ books = [] }) => {
             author={book.author}
             genre={book.genre}
             cover={book.cover}
-            progress={book.progress}
+          
             onResume={() => console.log(`Resume "${book.title}"`)}
             onClick={() => console.log(`Open "${book.title}" in reader`)}
           />

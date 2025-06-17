@@ -1,0 +1,171 @@
+.trending-section {
+  padding: 2rem 1.5rem;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.trending-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2dd4bf;
+  margin-bottom: 1rem;
+}
+
+.trending-book-list {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.trending-book-list::-webkit-scrollbar {
+  display: none;
+}
+
+.trending-card {
+  flex: 0 0 auto;
+  width: 160px;
+  background: #1e1e2e;
+  border-radius: 8px;
+  padding: 0.75rem;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+
+  /* 🔽 Snap each card into view */
+  scroll-snap-align: start;
+}
+
+.trending-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.fallback {
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.trending-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.4rem 0 0.2rem;
+}
+
+.trending-author {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-bottom: 0.6rem;
+}
+
+.trending-button {
+  background-color: #2dd4bf;
+  color: #0f172a;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.trending-button:hover {
+  background-color: #1bc6aa;
+}
+.trending-heading-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.trending-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2dd4bf;
+}
+
+.scroll-button {
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  color: #2dd4bf;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  transition: color 0.3s;
+}
+
+.scroll-button:hover {
+  color: #1bc6aa;
+}
+.trending-scroll-wrapper {
+  position: relative;
+}
+
+.trending-book-list {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  /* Hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.trending-book-list::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-button-overlay {
+  position: absolute;
+  bottom: 40%;
+  transform: translateY(50%);
+  background-color: rgba(45, 212, 191, 0.9);
+  color: #0f172a;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 5;
+  transition: background 0.3s;
+}
+
+.scroll-button-overlay:hover {
+  background-color: #1bc6aa;
+}
+.scroll-button-overlay.left {
+  left: -10px;
+}
+
+.scroll-button-overlay.right {
+  right: -10px;
+}
+
+
+@media (max-width: 768px) {
+  .trending-card {
+    width: 250px;
+  }
+
+  .trending-img {
+    height: 280px;
+  }
+
+  .scroll-button-overlay {
+    display: none;
+  }
+}
