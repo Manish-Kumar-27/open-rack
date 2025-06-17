@@ -2,7 +2,36 @@ import React, { useState } from "react";
 import "./HomePage.css";
 import { FiMenu, FiX, FiBookOpen, FiBookmark, FiUser,FiSearch } from "react-icons/fi";
 import { ImSpinner2 } from "react-icons/im"; // 🌀 Spinner icon
+import ContinueReading from "../../components/continueReading/continueReading";
 
+const books = [
+  {
+    title: "Atomic Habits",
+    author: "James Clear",
+    genre: "Self-Help",
+    rating: 4.5,
+    progress:80,
+    summary: "A guide to building good habits and breaking bad ones.",
+    cover: "https://covers.openlibrary.org/b/id/10417315-L.jpg",
+    progress: 75,
+  },{
+    title: "Atomic Habits",
+    author: "James Clear",
+    genre: "Self-Help",
+    rating: 4.5,
+    summary: "A guide to building good habits and breaking bad ones.",
+    cover: "https://covers.openlibrary.org/b/id/10417315-L.jpg",
+    progress: 75,
+  },{
+    title: "Atomic Habits",
+    author: "James Clear",
+    genre: "Self-Help",
+    rating: 4.5,
+    summary: "A guide to building good habits and breaking bad ones.",
+    cover: "https://covers.openlibrary.org/b/id/10417315-L.jpg",
+    progress: 75,
+  },
+];
 const HomePage = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
@@ -71,6 +100,7 @@ const HomePage = () => {
           This is your personalized e-book experience. Use the sidebar to
           explore.
         </p>
+        <ContinueReading books={books} />
       </main>
     </div>
   );
